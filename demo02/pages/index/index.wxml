@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <input placeholder="请输入运单号" bindinput="input" />
+  <input placeholder="请输入快递公司编码" bindinput="ainput" />
+
+
+
+  <button type="primary" bindtap="btnClick">查询</button>
+
+  <scroll-view scroll-y style="height: 350rpx;">
+    <view wx:for="{{message.result.list}}" id='info'>
+      {{item.remark}}-【{{item.datetime}}】
+    </view>
+  </scroll-view>
+
+</view>
